@@ -1,7 +1,7 @@
 var express=require('express');
 var router= express.Router();
 var mongojs= require('mongojs');
-var db=mongojs('mongodb://Pulkit:9971163023@ds119486.mlab.com:19486/meantodopulkit',['todos']);
+var db=mongojs('your mlabs url',['your table name']);
 router.get('/todos',function(req,res,next){
     db.todos.find(function(err,todos){
         if(err){
